@@ -1,11 +1,11 @@
-all: server client
+all: crsd crc
 
 
-server: 
-	g++ crsd.c -o server
+crsd: 
+	g++ crsd.c -o crsd
 	
-client: interface.h
-	g++ -pthread crc.c -o client
+crc: interface.h
+	g++ -pthread crc.c -o crc
 
 clean:
-	rm -f *.o server client
+	rm -f *.o crsd crc
